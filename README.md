@@ -1,5 +1,9 @@
 # 1Password-Online-Vault-Backup-Tool.ps1
 
+For those of us who don't trust 1password to solely maintain and store our sensitive data
+
+------------------------------------
+
 ** can set to automatically run by adding as a task via windows task scheduler **
 
 ** see: https://o365reports.com/2019/08/02/schedule-powershell-script-task-scheduler **
