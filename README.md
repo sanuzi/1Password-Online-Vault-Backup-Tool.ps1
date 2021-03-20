@@ -2,6 +2,8 @@
                               
 ** can set to automatically run by adding as a task via windows task scheduler **
 
+** see: https://o365reports.com/2019/08/02/schedule-powershell-script-task-scheduler **
+
 ------------------------------------
 
  PRE-REQS                     
