@@ -18,8 +18,8 @@ For those of us who don't trust 1password to solely maintain and store our sensi
    
    * run the following in your powershell client: 
         
-        op signin my.1password.com email@domain.com
+     * op signin my.1password.com email@domain.com
 
    * this will add your account to the windows cache; from this point on, you can execute this shorthand to sign in: 
         
-        op signin
+     * op signin
