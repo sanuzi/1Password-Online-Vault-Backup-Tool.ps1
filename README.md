@@ -1,6 +1,6 @@
 # 1Password-Online-Vault-Backup-Tool
                               
-** can set to automatically run by adding as a task via windows task scheduler)
+** can set to automatically run by adding as a task via windows task scheduler **
 
 ------------------------------------
 
