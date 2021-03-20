@@ -18,13 +18,25 @@
     [string]$aeskey   = ""
  )
 
+
+# load dependencies
+$scriptRoot = $PSScriptRoot;
+if ($psISE)
+{
+	$scriptRoot = Split-Path -Path $psISE.CurrentFile.FullPath        
+}
+$aesModulePath = $scriptRoot + "\dependencies\PowershellAes.ps1"
+. $aesModulePath
+
+
+# exit if missing credentials
 if ($email -eq "" -and $password -eq "") {
     echo ""
 	echo "   !!! ERROR: E-mail and/or password missing; exiting script without running !!!"
 }
 else {
     # login to 1password account and set auth token as temporary PATH var
-    Invoke-Expression $($password | op signin)
+	Invoke-Expression $($password | op signin)
 
     #scrape vault items for all items uuids via regex
     $allItems = op list items;
@@ -35,7 +47,7 @@ else {
     foreach ($match in $uuids)
     {
         
-        $itemDetail = op get item $match.Groups[1].Value;
+       $itemDetail = op get item $match.Groups[1].Value;
         $itemDetails.Add($itemDetail);
     }
 
@@ -43,15 +55,6 @@ else {
 
     # encrypt with aes sha 256 if key is provided
     if ($aeskey -ne $null) {
-
-        $scriptRoot = $PSScriptRoot;
-        if ($psISE)
-        {
-            $scriptRoot = Split-Path -Path $psISE.CurrentFile.FullPath        
-        }
-
-		$aesModulePath = $scriptRoot + "\dependencies\PowershellAes.ps1"
-        import-module $aesModulePath -Verbose:$false
         $finalizedOutput = Encrypt-String $aeskey $rawOutput
 	}
     else {
