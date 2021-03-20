@@ -17,7 +17,9 @@ For those of us who don't trust 1password to solely maintain and store our sensi
  * use op cli to manually log into 1password via cli for the first time (you won't have to do this again)
    
     . run the following without quotes: 
+        
         'op signin my.1password.com email@domain.com'
 
     . this will add your account to the windows cache; from this point on, you can execute this shorthand to sign in: 
+        
         'op signin'
