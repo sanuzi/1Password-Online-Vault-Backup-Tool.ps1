@@ -8,7 +8,7 @@
 
  PRE-REQS                     
 
- * download op cli (url here) and add to PATH
+ * download op cli (https://app-updates.agilebits.com/product_history/CLI) and add to PATH
 
  * use op cli to manually log into 1password via cli for the first time (you won't have to do this again)
    
