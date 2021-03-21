@@ -38,11 +38,11 @@ else {
     # login to 1password account and set auth token as temporary PATH var
 	Invoke-Expression $($password | op signin)
 
-    #scrape vault items for all items uuids via regex
+    # scrape vault items for all items uuids via regex
     $allItems = op list items;
     $uuids = [regex]::Matches($allItems, '"uuid":([^"]*"[^"]*)')
 
-    #get item details for each item
+    # get item details for each item
     $itemDetails = [System.Collections.ArrayList]@()
     foreach ($match in $uuids)
     {
