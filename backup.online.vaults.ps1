@@ -60,5 +60,5 @@ else {
         $finalizedOutput = $itemDetails
     }
 
-    $finalizedOutput > $PSScriptRoot\encrypted.vault.backup.txt
+    $finalizedOutput > $PSScriptRoot\online.vault.backup.txt
 }
