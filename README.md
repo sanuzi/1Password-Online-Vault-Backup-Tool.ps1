@@ -23,3 +23,14 @@ For those of us who don't trust 1password to solely maintain and store our sensi
    * this will add your account to the windows cache; from this point on, you can execute this shorthand to sign in: 
         
      * op signin
+
+------------------------------------
+
+ HOW TO RUN
+
+* Open powershell (or powershell ise)
+
+* Enter in exact path of backup.online.vaults.ps1 file, and hit enter 
+  * i.e, "C:\Users\Username\Dropbox\backup.online.1password.vault\backup.online.vaults.ps1"
+
+* Outputs to .\online.vault.backup.txt
