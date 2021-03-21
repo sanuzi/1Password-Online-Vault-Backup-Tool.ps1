@@ -28,12 +28,8 @@ For those of us who don't trust 1password to solely maintain and store our sensi
 
  HOW TO RUN
 
-1. <br/> 
-   Open powershell (or powershell ise)
+- Open powershell (or powershell ise)
 
-2. <br/> 
-   Enter in exact path of backup.online.vaults.ps1 file, and hit enter 
+- Enter in exact path of backup.online.vaults.ps1 file, and hit enter 
   * i.e, "C:\Users\Username\Dropbox\backup.online.1password.vault\backup.online.vaults.ps1"
-
-3. <br/>
-   Script will execute, and outputs to .\online.vault.backup.txt
+  * Script will execute, and outputs to .\online.vault.backup.txt
