@@ -33,3 +33,7 @@ For those of us who don't trust 1password to solely maintain and store our sensi
 - Enter in exact path of backup.online.vaults.ps1 file, and hit enter 
   * i.e, "C:\Users\Username\Dropbox\backup.online.1password.vault\backup.online.vaults.ps1"
   * Script will execute, and outputs to .\online.vault.backup.txt
+
+------------------------------------
+
+Have fun 8)
