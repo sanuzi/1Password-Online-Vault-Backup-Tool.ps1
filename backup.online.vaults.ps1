@@ -29,8 +29,8 @@ $aesModulePath = $scriptRoot + "\dependencies\PowershellAes.ps1"
 . $aesModulePath
 
 
-# exit if missing credentials
-if ($email -eq "" -and $password -eq "") {
+# exit if missing credentials and aes key
+if ($email -eq "" -and $password -eq "" -and $aeskey -eq "") {
     echo ""
 	echo "   !!! ERROR: E-mail and/or password missing; exiting script without running !!!"
 }
@@ -50,8 +50,7 @@ else {
        $itemDetail = op get item $match.Groups[1].Value;
         $itemDetails.Add($itemDetail);
     }
-
-    $rawOutput = $itemDetails  | & {"$input"}
+    $rawOutput = $itemDetails  | & {"$input"}	# flattens $itemDetails array to string
 
     # encrypt with aes sha 256 if key is provided
     if ($aeskey -ne $null) {
