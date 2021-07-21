@@ -1,6 +1,9 @@
 #
-# NOTE: I did not write this; this is a dependency I've sourced from (can't remember now)
-#
+# Note: 
+#        I did not write this 
+#        This is a dependency I've sourced from: 
+#            https://gist.github.com/ctigeek/2a56648b923d198a6e60
+#            Authored by ctigeek (https://twitter.com/ctigeek)
 
 function Create-AesManagedObject($key, $IV) {
     $aesManaged = New-Object "System.Security.Cryptography.AesManaged"
