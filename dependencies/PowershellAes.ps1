@@ -1,3 +1,7 @@
+#
+# NOTE: I did not write this; this is a dependency I've sourced from (can't remember now)
+#
+
 function Create-AesManagedObject($key, $IV) {
     $aesManaged = New-Object "System.Security.Cryptography.AesManaged"
     $aesManaged.Mode = [System.Security.Cryptography.CipherMode]::CBC
